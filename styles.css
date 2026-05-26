@@ -65,13 +65,11 @@ a {
 }
 
 .brand-mark {
-  display: grid;
+  display: block;
   width: 34px;
   height: 34px;
-  place-items: center;
-  color: #fff;
-  background: linear-gradient(135deg, var(--blue), var(--green));
   border-radius: 8px;
+  object-fit: contain;
 }
 
 .nav-links {
