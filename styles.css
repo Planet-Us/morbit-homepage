@@ -478,6 +478,39 @@ address {
   font-style: normal;
 }
 
+.request-card {
+  margin: 18px 0;
+  padding: 20px;
+  background: var(--soft-blue);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.request-card dl,
+.request-card dd {
+  margin: 0;
+}
+
+.request-card div + div {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(20, 33, 61, 0.12);
+}
+
+.request-card dt {
+  color: var(--ink);
+  font-weight: 900;
+}
+
+.request-card dd {
+  color: var(--muted);
+}
+
+.request-card ul {
+  margin-bottom: 0;
+  padding-left: 20px;
+}
+
 @media (max-width: 900px) {
   .site-header {
     align-items: flex-start;
