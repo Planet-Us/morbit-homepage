@@ -350,6 +350,26 @@ h3 {
   font-weight: 800;
 }
 
+.company-footer {
+  align-items: flex-start;
+}
+
+.footer-company,
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-company strong {
+  color: var(--ink);
+  font-size: 17px;
+}
+
+.footer-contact {
+  text-align: right;
+}
+
 .policy-layout {
   padding: clamp(34px, 6vw, 72px) clamp(20px, 5vw, 72px) clamp(64px, 8vw, 100px);
 }
