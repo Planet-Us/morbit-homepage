@@ -308,6 +308,50 @@ h3 {
   border-radius: 8px;
 }
 
+.feature-media {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 20px;
+  background:
+    linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(15, 159, 122, 0.12)),
+    linear-gradient(90deg, rgba(20, 33, 61, 0.06) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(20, 33, 61, 0.06) 1px, transparent 1px),
+    #fff;
+  background-size: auto, 28px 28px, 28px 28px, auto;
+  border: 1px dashed rgba(20, 33, 61, 0.22);
+  border-radius: 8px;
+}
+
+.feature-media::before,
+.feature-media::after {
+  position: absolute;
+  content: "";
+  border-radius: 999px;
+}
+
+.feature-media::before {
+  inset: 28% 18%;
+  border: 2px solid rgba(37, 99, 235, 0.24);
+}
+
+.feature-media::after {
+  width: 38px;
+  height: 38px;
+  right: 18px;
+  bottom: 18px;
+  background: var(--amber);
+  box-shadow: -58px -34px 0 var(--green);
+}
+
+.feature-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .feature-card p,
 .split-section p,
 .contact-band p {
