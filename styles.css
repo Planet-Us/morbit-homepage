@@ -298,9 +298,12 @@ h3 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
+  align-items: stretch;
 }
 
 .feature-card {
+  display: flex;
+  flex-direction: column;
   min-height: 230px;
   padding: 26px;
   background: var(--panel);
@@ -312,7 +315,7 @@ h3 {
   position: relative;
   overflow: hidden;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: clamp(170px, 18vw, 220px);
   margin-bottom: 20px;
   background:
     linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(15, 159, 122, 0.12)),
@@ -349,7 +352,8 @@ h3 {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  padding: 10px;
+  object-fit: contain;
 }
 
 .feature-card p,
@@ -667,6 +671,10 @@ address {
   .feature-grid,
   .summary-strip {
     grid-template-columns: 1fr;
+  }
+
+  .feature-media {
+    height: clamp(190px, 52vw, 300px);
   }
 
   .contact-band {
