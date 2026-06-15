@@ -339,6 +339,21 @@ h3 {
   color: var(--muted);
 }
 
+.feature-link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  min-height: 36px;
+  margin-top: auto;
+  color: var(--blue);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.feature-link:hover {
+  text-decoration: underline;
+}
+
 .split-section {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
