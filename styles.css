@@ -89,6 +89,9 @@ a {
 }
 
 .hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(360px, 520px);
   gap: clamp(32px, 6vw, 80px);
@@ -97,7 +100,26 @@ a {
   padding: clamp(48px, 8vw, 96px) clamp(20px, 5vw, 72px) clamp(36px, 5vw, 64px);
 }
 
+.hero::before {
+  position: absolute;
+  top: 50%;
+  left: max(-130px, -8vw);
+  z-index: 0;
+  width: min(58vw, 780px);
+  height: min(72vh, 620px);
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg width='900' height='680' viewBox='0 0 900 680' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23d9e1ea' stroke-width='5' stroke-linecap='round' stroke-linejoin='round' opacity='.82'%3E%3Cg transform='translate(72 110) skewY(-16)'%3E%3Cpath d='M84 96 408 28 560 114 238 186Z'/%3E%3Cpath d='M84 96v124l154 86 322-74V114'/%3E%3Cpath d='M238 186v120'/%3E%3Cpath d='M132 132 380 82 474 134 226 188Z'/%3E%3Cpath d='M142 230 216 270'/%3E%3Cpath d='M426 178 524 154'/%3E%3Ccircle cx='214' cy='302' r='22'/%3E%3Ccircle cx='488' cy='238' r='24'/%3E%3C/g%3E%3Cg transform='translate(168 248) skewY(-16)' opacity='.72'%3E%3Cpath d='M84 96 408 28 560 114 238 186Z'/%3E%3Cpath d='M84 96v124l154 86 322-74V114'/%3E%3Cpath d='M238 186v120'/%3E%3Cpath d='M132 132 380 82 474 134 226 188Z'/%3E%3Ccircle cx='214' cy='302' r='22'/%3E%3Ccircle cx='488' cy='238' r='24'/%3E%3C/g%3E%3Cg transform='translate(-20 315) skewY(-16)' opacity='.55'%3E%3Cpath d='M84 96 408 28 560 114 238 186Z'/%3E%3Cpath d='M84 96v124l154 86 322-74V114'/%3E%3Cpath d='M238 186v120'/%3E%3Cpath d='M132 132 380 82 474 134 226 188Z'/%3E%3Ccircle cx='214' cy='302' r='22'/%3E%3Ccircle cx='488' cy='238' r='24'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+  opacity: 0.9;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
 .hero-copy {
+  position: relative;
+  z-index: 1;
   max-width: 720px;
 }
 
@@ -168,6 +190,8 @@ h3 {
 }
 
 .product-visual {
+  position: relative;
+  z-index: 1;
   overflow: hidden;
   min-height: 520px;
   background:
@@ -654,6 +678,15 @@ address {
 
   .hero {
     min-height: auto;
+  }
+
+  .hero::before {
+    top: 120px;
+    left: -180px;
+    width: 760px;
+    height: 520px;
+    opacity: 0.42;
+    transform: none;
   }
 
   .product-visual {
