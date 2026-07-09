@@ -111,7 +111,6 @@ a {
   background-image: url("./assets/hero-buses-muted.png");
   background-repeat: no-repeat;
   background-position: left center;
-  background-size: cover;
   opacity: 0.85;
   transform: translateY(-50%);
   pointer-events: none;
