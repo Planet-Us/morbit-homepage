@@ -364,6 +364,7 @@ h3 {
 }
 
 .dmate-heading {
+  max-width: 1000px;
   margin-top: clamp(64px, 8vw, 96px);
 }
 
