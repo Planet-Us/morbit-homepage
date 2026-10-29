@@ -615,6 +615,22 @@ h3 {
   font-size: 18px;
 }
 
+.policy-product-heading {
+  max-width: 980px;
+  margin-top: clamp(52px, 7vw, 84px);
+}
+
+.policy-product-heading h2 {
+  margin-bottom: 10px;
+  font-size: clamp(30px, 4vw, 46px);
+}
+
+.policy-product-heading p:last-child {
+  max-width: 760px;
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
 .policy-meta {
   display: flex;
   flex-wrap: wrap;
